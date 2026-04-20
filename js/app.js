@@ -12,6 +12,9 @@ new Vue({
     currentQuestion() {
       return this.questions[this.currentIdx]
     },
+    selectedList() {
+      return this.questions.map(item => item.options.find(opt => opt.selected)).filter(opt => opt)
+    },
     progress() {
       return ((this.currentIdx + 1) / questions.length) * 100
     },
@@ -45,20 +48,22 @@ new Vue({
 
       await new Promise(resolve => setTimeout(resolve, 200))
       
-      if(this.currentIdx === questions.length -1){
-        this.calcResult()
-      }else{
+      if(this.currentIdx !== questions.length - 1){
         this.currentIdx++
       }
-
-      
     },
     // 结果算法
     calcResult() {
+      if(this.selectedList.length !== 15) {
+        alert('您还有' + (15 - this.selectedList.length) + '个选项未选择')
+        console.log(this.selectedList.length);
+        return
+      }
       // ========== 匹配算法 ==========
-      let selectList = questions.map(item => item.options.find(opt => opt.selected))
+      console.log(this.selectedList.length);
       this.personalityList.forEach(person => {
-        selectList.forEach(opt => {
+        this.selectedList.forEach(opt => {
+          if(!opt) return // 未选择选项则跳过不返回值（而非返回null） // 其实加了上面的判断也没必要（
           let score = 0.0
           score += opt.scores.brave * person.weight[0]
           score += opt.scores.strong * person.weight[1]
