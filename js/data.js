@@ -157,7 +157,7 @@ const personalityList = [
   {
     name: "TAP",
     desc: "干脆利落、一击即中，从不拖泥带水的行动派",
-    explain: "就像 TAP 只需在判定瞬间按下，完成即收，不拖沓、不犹豫，做事直白爽快，专注当下。",
+    explain: "你就像 TAP 只需在落在判定线上瞬间拍下，完成即收，不拖沓、不犹豫，做事直白爽快，专注当下的事物。",
     img: "images/tap.png",
     weight: [1.7, 1.1, 0.9, 0.7], // 降低brave极端性，均衡其他维度
     score: 0
@@ -165,7 +165,7 @@ const personalityList = [
   {
     name: "HOLD",
     desc: "沉稳执着、有始有终，耐心拉满的坚定守护者",
-    explain: "如同 HOLD 需要从头按到尾，你一旦开始就会坚持到底，沉稳可靠，绝不半途松手、半途而废。",
+    explain: "如同 HOLD 需要从头一直按下去，你一旦开始就会坚持到底，沉稳可靠，就像HOLE一样，直到底，不半途而手、不半途而废。",
     img: "images/hold.png",
     weight: [0.5, 1.6, 0.7, 1.2], // 保持原有稳定人设
     score: 0
@@ -173,7 +173,7 @@ const personalityList = [
   {
     name: "SLIDE",
     desc: "灵动帅气、开局亮眼，偶尔虎头蛇尾的机灵鬼",
-    explain: "像 SLIDE 星星一样，开头帅气精准，但尾部容易漏滑，代表你灵气足、反应快，但耐心与持久力稍弱。",
+    explain: "像 SLIDE 星星一样，开头帅气精准，但很容易留尾，代表你灵气足、反应快，有强大的判断力，能及时调整策略。但耐心与持久力稍弱，有的时候容易半路分心。",
     img: "images/slide.png",
     weight: [1.9, 0.6, 1.1, 0.6], // 稍微提高权重竞争力
     score: 0
@@ -181,7 +181,7 @@ const personalityList = [
   {
     name: "TOUCH",
     desc: "佛系松弛、随性自在，毫无压力的养生玩家",
-    explain: "对应 TOUCH 判定极松，随便乱摸都能中，你心态随和、不较真、不紧绷，怎么舒服怎么来。",
+    explain: "对应 TOUCH 判定极松，随便乱糊都能判定，你做事心态随和、不较真、不紧绷，怎么舒服怎么来。是一位非常轻松的人，不会因为任何事情而压力大。",
     img: "images/touch.png",
     weight: [0.7, 0.7, 0.9, 1.8], // 降低easy极端性
     score: 0
@@ -189,7 +189,7 @@ const personalityList = [
   {
     name: "TOUCH HOLD",
     desc: "低调蓄力、默默深耕，厚积薄发一鸣惊人的强者",
-    explain: "旧版只在中心沉默，新版全屏突然爆发，如同你长期低调蓄力，不声不响，却在关键时刻惊艳所有人。",
+    explain: "旧版只在判定C区中心沉默，新版跳出C区判定全屏突然爆发，如同你长期低调蓄力，不声不响，却在关键时刻惊艳所有人。",
     img: "images/touchhold.png",
     weight: [0.9, 1.7, 1.0, 0.6], // 稍微提高权重竞争力
     score: 0
@@ -205,7 +205,7 @@ const personalityList = [
   {
     name: "EX-NOTE",
     desc: "温和治愈、包容大度，轻松化解紧张的小太阳",
-    explain: "EX-NOTE 判定宽松、容错极高，你包容自己与他人的失误，心态轻松，能治愈身边所有人。",
+    explain: "EX-NOTE 因为包了保护套而变得判定宽松、容错极高，就像你包容自己与他人的失误，心态轻松，能治愈身边所有人。",
     img: "images/ex.png",
     weight: [0.7, 1.1, 0.5, 1.7], // 降低easy极端性
     score: 0
@@ -213,9 +213,9 @@ const personalityList = [
   {
     name: "EACH",
     desc: "重视默契、偏爱协同，离不开同伴的最佳搭档",
-    explain: "EACH 必须双押同步才能成功，你重视配合、默契与陪伴，喜欢并肩前行，无法独自行动。",
+    explain: "EACH 必须双押同步才能成功，你重视配合、默契与陪伴，喜欢并肩前行，喜欢社交，经常跟机厅的同好打成一片。",
     img: "images/each.png",
-    weight: [1.1, 1.1, 0.7, 1.6], // 降低easy极端性，增加sharp独特性
+    weight: [1.1, 1.1, 0.7, 1.6], 
     score: 0
   },
   {
@@ -223,7 +223,7 @@ const personalityList = [
     desc: "灵动亮眼、自带高光，不刻意也能温柔吸睛",
     explain: "普通操作却能绽放彩虹特效，就像你不必强求也能闪闪发光，轻松自在，安静却有存在感。",
     img: "images/shinetouch.png",
-    weight: [1.3, 0.7, 1.0, 1.0], // 保持原有均衡人设
+    weight: [1.4, 0.8, 1.0, 1.0], 
     score: 0
   }
 ]

@@ -26,6 +26,11 @@
     <div class="bubble"></div>
   </div>
 
+  <!-- GitHub悬浮窗 -->
+  <a v-if="result != null" href="https://github.com/yourusername" target="_blank" class="github-float">
+    <img src="images\github.png" alt="" srcset="">
+  </a>
+
   <div id="app">
     <!-- 1. 开始页 -->
     <div class="page" v-show="stage === 'start'">
@@ -42,11 +47,11 @@
     <!-- 2. 答题页 -->
     <div class="page" v-show="stage === 'quiz'">
       <div class="card">
-        <div class="progress-bar">
-          <div class="progress" :style="{ width: progress + '%' }"></div>
-        </div>
         <div class="question">
           第 {{ currentIdx + 1 }} / {{ questions.length }} 题：{{ currentQuestion.title }}
+        </div>
+         <div class="progress-bar">
+          <div class="progress" :style="{ width: progress + '%' }"></div>
         </div>
         <div class="options">
           <button 
