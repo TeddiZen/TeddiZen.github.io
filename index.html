@@ -14,6 +14,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- 绝赞容器 -->
+  <div class="bubbles-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
   <div id="app">
     <!-- 1. 开始页 -->
     <div class="page" v-show="stage === 'start'">
@@ -91,8 +103,19 @@
               <p>{{ this.result.explain }}</p>
             </div>
           </div>
+          
+          <!-- 娱乐提示 -->
+          <div class="disclaimer">
+            <p>⚠️ 此测试仅供娱乐，非专业心理测评工具</p>
+          </div>
         </div>
         <button class="btn-primary" @click="restart">重新测试</button>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+          <p>© 2024 舞萌人格测试</p>
+          <p>设计与开发：WMC</p>
+        </footer>
       </div>
     </div>
   </div>

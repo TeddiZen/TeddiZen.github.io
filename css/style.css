@@ -5,17 +5,131 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(135deg, #121212 0%, #1e1e2e 50%, #121212 100%); /* 渐变背景增加深度 */
+  background: url('../images/back.png') no-repeat center center fixed;
+  background-size: cover;
   color: #e0e0e0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   padding: 20px;
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* 背景装饰元素 */
+/* 绝赞容器 */
+.bubbles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* 绝赞样式 */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: url('../images/maimainote.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.7;
+  animation: bubble-rise 15s infinite linear;
+  border-radius: 50%;
+}
+
+/* 不同大小的绝赞 */
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  left: 25%;
+  animation-delay: 2s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  left: 40%;
+  animation-delay: 4s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  left: 55%;
+  animation-delay: 1s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-child(5) {
+  width: 45px;
+  height: 45px;
+  left: 70%;
+  animation-delay: 3s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-child(6) {
+  width: 35px;
+  height: 35px;
+  left: 85%;
+  animation-delay: 5s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-child(7) {
+  width: 55px;
+  height: 55px;
+  left: 15%;
+  animation-delay: 2.5s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-child(8) {
+  width: 40px;
+  height: 40px;
+  left: 65%;
+  animation-delay: 4.5s;
+  animation-duration: 14s;
+}
+
+/* 泡泡上升动画 */
+@keyframes bubble-rise {
+  0% {
+    bottom: 100vh;
+    transform: translateX(200px) rotate(0deg);
+  }
+  100% {
+    bottom: -100px;
+    transform: translateX(-200px) rotate(360deg);
+  }
+}
+
+/* 背景调暗层 */
 body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.7); /* 调暗背景 */
+  pointer-events: none;
+  z-index: -1;
+}
+/* 背景装饰元素 */
+body::after {
   content: '';
   position: fixed;
   top: 0;
@@ -83,7 +197,7 @@ body::before {
 
 /* 核心：现代卡片设计 */
 .card {
-  background: rgba(40, 44, 52, 0.9); /* 半透明深灰 */
+  background: rgba(40, 44, 52, 0.725); 
   width: 100%;
   padding: 36px 28px;
   border-radius: 20px;
@@ -105,12 +219,12 @@ body::before {
 h1 {
   text-align: center;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 35px;
   background: linear-gradient(135deg, #e0e0e0 0%, #4FB3E8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 h2,h3 {
@@ -120,7 +234,7 @@ h2,h3 {
 }
 
 .result-name {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 8px;
   color: rgb(255, 227, 18);
   font-weight: 1000;
@@ -365,6 +479,63 @@ button {
 .result-detail p {
   margin: 0;
   text-align: left;
+}
+
+/* 页脚样式 */
+.disclaimer {
+  background: rgba(255, 255, 100, 0.1);
+  border: 1px solid rgba(255, 255, 100, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.disclaimer p {
+  margin: 0;
+  font-size: 13px;
+  color: #f0f0a0;
+  line-height: 1.4;
+}
+
+.footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.footer p:first-child {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 页脚样式 */
+.footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.footer p:first-child {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .avatar {
