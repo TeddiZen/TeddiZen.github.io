@@ -300,9 +300,25 @@ h3 {
   display: flex;
   justify-content: center;
   margin: 16px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 上下浮动动画 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .header-image img {
+  z-index: 10;
+  opacity: 1 !important;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -545,6 +561,7 @@ button {
 }
 
 .avatar {
+  opacity: 1 !important;
   width: 180px;
   height: 240px;
   object-fit: cover;
@@ -552,6 +569,8 @@ button {
   background-color: rgba(0,0,0,1);
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  position: relative;
 }
 
 .avatar:hover {
@@ -669,11 +688,12 @@ button {
   transition: all 0.3s ease;
   z-index: 1000;
   text-decoration: none;
+  overflow: hidden;
 }
 .github-float img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 /* 响应式调整 */
 @media (max-width: 480px) {

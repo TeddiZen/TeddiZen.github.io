@@ -26,12 +26,11 @@
     <div class="bubble"></div>
   </div>
 
-  <!-- GitHub悬浮窗 -->
-  <a v-if="result != null" href="https://github.com/yourusername" target="_blank" class="github-float">
-    <img src="images\github.png" alt="" srcset="">
-  </a>
-
   <div id="app">
+    <!-- GitHub悬浮窗 -->
+    <a v-if="stage === 'result'" href="https://github.com/TeddiZen/Test-MaiMai-Key" target="_blank" class="github-float">
+      <img src="images\github.png" alt="" srcset="">
+    </a>
     <!-- 1. 开始页 -->
     <div class="page" v-show="stage === 'start'">
       <div class="content">
@@ -119,8 +118,8 @@
         
         <!-- 页脚 -->
         <footer class="footer">
-          <p>© 2024 舞萌人格测试</p>
-          <p>设计与开发：WMC</p>
+          <p>2026 测测你的人格更像舞萌的哪种Note</p>
+          <p>开发：@哲迪君</p>
         </footer>
       </div>
     </div>
