@@ -105,7 +105,7 @@ body {
   animation-duration: 14s;
 }
 
-/* 泡泡上升动画 */
+/* 绝赞动画 */
 @keyframes bubble-rise {
   0% {
     bottom: 100vh;

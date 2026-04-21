@@ -1,4 +1,4 @@
-// 题目（选项已随机打乱 + id 重新编号）
+// 题目
 const questions = [
   {
     id: 1,
@@ -152,7 +152,7 @@ const questions = [
   }
 ]
 
-// 角色（完全不变）
+// 角色
 const personalityList = [
   {
     name: "TAP",
@@ -165,7 +165,7 @@ const personalityList = [
   {
     name: "HOLD",
     desc: "沉稳执着、有始有终，耐心拉满的坚定守护者",
-    explain: "如同 HOLD 需要从头一直按下去，你一旦开始就会坚持到底，沉稳可靠，就像HOLE一样，直到底，不半途而手、不半途而废。",
+    explain: "如同 HOLD 需要从头一直按下去，你一旦开始就会坚持到底，沉稳可靠，就像HOLE一样，直到底，不半途而废。",
     img: "images/hold.png",
     weight: [0.5, 1.7, 0.8, 1.3],
     score: 0
