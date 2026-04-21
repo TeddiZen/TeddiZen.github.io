@@ -5,6 +5,12 @@
 
 ---
 
+##项目截图
+
+<img width="2342" height="1391" alt="image" src="https://github.com/user-attachments/assets/795526d5-4a6b-4914-90dc-ca897f56d482" />
+
+---
+
 ## 项目说明
 
 这是我个人用于 **练习 Vue.js 的练手项目**，主要目的是巩固和实践前端基础知识，
