@@ -34,7 +34,7 @@
   <div id="app">
     <!-- 1. 开始页 -->
     <div class="page" v-show="stage === 'start'">
-      <div class="card">
+      <div class="content">
         <h1>测测你的人格更像舞萌的哪种Note</h1>
         <div class="header-image">
           <img src="images/head.png" alt="Header Image">
@@ -46,7 +46,7 @@
 
     <!-- 2. 答题页 -->
     <div class="page" v-show="stage === 'quiz'">
-      <div class="card">
+      <div class="content">
         <div class="question">
           第 {{ currentIdx + 1 }} / {{ questions.length }} 题：{{ currentQuestion.title }}
         </div>
@@ -64,17 +64,18 @@
             {{ opt.text }}
           </button>
         </div>
-        <div class="button-container">
-          <button class="btn-question" v-if="currentIdx > 0" @click="prevQuestion">上一题</button>
-          <button class="btn-question" v-if="currentIdx < questions.length - 1" @click="nextQuestion">下一题</button>
-          <button class="btn-question" v-if="currentIdx === questions.length - 1" @click="calcResult">提交</button>
-        </div>
+      </div>
+      <div class="button-container">
+        <button class="btn-question" v-if="currentIdx > 0" @click="prevQuestion">上一题</button>
+        <button class="btn-question" v-if="currentIdx < questions.length - 1" @click="nextQuestion">下一题</button>
+        <button class="btn-question" v-if="currentIdx === questions.length - 1" @click="calcResult">提交</button>
       </div>
     </div>
+    
 
     <!-- 3. 结果页 -->
     <div class="page" v-show="stage === 'result'">
-      <div class="card">
+      <div class="content">
         <h1>测评结果</h1>
         <div class="result-box" v-if="this.result">
           <p class="user-name">欢迎回来~， {{ userName ? userName : 'wmc' }}！你最接近</p>
